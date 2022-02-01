@@ -10,9 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_02_01_201654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "booking_reviews", force: :cascade do |t|
+    t.bigint "booking_id", null: false
+    t.integer "booking_ratings"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_booking_reviews_on_booking_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "status"
+    t.bigint "property_id", null: false
+    t.string "payment_method"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_bookings_on_property_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.text "description"
+    t.string "name"
+    t.string "location"
+    t.bigint "user_id", null: false
+    t.string "category"
+    t.string "theme"
+    t.integer "price"
+    t.boolean "availability"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "owner_profile"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "booking_reviews", "bookings"
+  add_foreign_key "bookings", "properties"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "properties", "users"
 end
