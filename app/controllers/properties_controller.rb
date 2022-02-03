@@ -11,4 +11,15 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
+  def destroy
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def show
+  end
 end
