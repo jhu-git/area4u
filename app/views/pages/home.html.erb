@@ -1,27 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<div id="navbar">
-  <div class="buttons-card">
-    <%= link_to "Properties", "#" %>
-    <%= link_to "Category", "#" %>
-    <%= link_to "Locations", "#" %>
-    <%= link_to "Themes", "#" %>
-  </div>
-  <div class="user-options">
-    <%= link_to "button", "#" %>
-    <p>icon</p>
-  </div>
-</div>
+
 <div class="content">
   <div class="banner">
     <h1>Area 4U</h1>
-  </div>
-  <div class="search-bar">
-    <form action="">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
   </div>
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -46,11 +28,23 @@
   </button>
 </div>
 
+  <%= render "shared/searchbox" %>
+
+<div class="carousel">
+  <img alt="Area4u"
+     width="2000"
+     src="/assets/carousel.png"/>
+
+
   <div class="carousel-footer">
     <div>
       <h2>Choose the perfect area rental</h2>
         <div>
+
           <ul class="list-inline">
+
+          <ul>
+
             <li>Price per hour</li>
             <li>Ratings</li>
             <li>Properties</li>
@@ -68,8 +62,6 @@
         <%= link_to "4.5+", "#" %>
         <%= link_to "4+", "#" %>
         <%= link_to "3.5+", "#" %>
-
-
 
         <%= link_to "Themes", "#" %>
         <%= link_to "Category", "#" %>
@@ -134,11 +126,30 @@
   </div>
 -->
 
+      </ul>
+    </div>
+      <div>
+        <ul>
+          <%= link_to "4.5+", "#" %>
+          <%= link_to "4+", "#" %>
+          <%= link_to "3.5+", "#" %>
+        </ul>
+      </div>
+        <div>
+          <ul>
+            <%= link_to "Themes", "#" %>
+            <%= link_to "Category", "#" %>
+            <%= link_to "Properties", "#" %>
+          </ul>
+      </div>
+
+
 <div class="tab">
     <h4>THEMES</h4>
   </div>
   <div class="cards">
     <div class="card">
+
       <%= image_tag "wellness.png", alt: "Cooking", width: 200 %>
       <%= link_to "1", "#" %>
     </div>
@@ -149,6 +160,18 @@
     <div class="card">
       <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
       <%= link_to "3", "#" %>
+
+      <%= image_tag "cooking.png", alt: "Cooking", width: 200 %>
+      <%= link_to "Cooking", "#" %>
+    </div>
+    <div class="card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Wellness", "#" %>
+    </div>
+    <div class="card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Luxury", "#" %>
+
     </div>
   </div>
   <div class="tab">
@@ -156,6 +179,7 @@
   </div>
   <div class="cards">
     <div class="card">
+
       <%= image_tag "wellness.png", alt: "Cooking", width: 200 %>
       <%= link_to "4", "#" %>
     </div>
@@ -166,6 +190,18 @@
     <div class="card">
       <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
       <%= link_to "6", "#" %>
+
+      <%= image_tag "cooking.png", alt: "Cooking", width: 200 %>
+      <%= link_to "Private Jet", "#" %>
+    </div>
+    <div class="card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Beach", "#" %>
+    </div>
+    <div class="card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Beach", "#" %>
+
     </div>
   </div>
   <div class="tab">
@@ -173,6 +209,7 @@
   </div>
   <div class="cards">
     <div class="testimonial-card">
+
       <%= image_tag "wellness.png", alt: "Cooking", width: 200 %>
       <%= link_to "7", "#" %>
     </div>
@@ -183,6 +220,20 @@
     <div class="testimonial-card">
       <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
       <%= link_to "9", "#" %>
+    </div>
+  </div>
+</div>
+
+      <%= image_tag "cooking.png", alt: "Cooking", width: 200 %>
+      <%= link_to "Cooking", "#" %>
+    </div>
+    <div class="testimonial-card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Wellness", "#" %>
+    </div>
+    <div class="testimonial-card">
+      <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
+      <%= link_to "Luxury", "#" %>
     </div>
   </div>
 </div>
