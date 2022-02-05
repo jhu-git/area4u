@@ -12,19 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  .user-options {
-    display: flex;
-    justify-content: space-between;
-  }
-}
 .cards {
   display: flex;
   justify-content: space-between;
+}
+
+body {background-color: black;}
+body {
+  color: white;
+
+  a {
+    color: blue;
+  }
 }

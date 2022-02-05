@@ -16,13 +16,14 @@
   <div class="banner">
     <h1>Area 4U</h1>
   </div>
-  <div class="search-bar">
+  <%= render "shared/searchbox" %>
+  <%# <div class="search-bar">
     <form action="">
         <input type="text" class="form-control">
         <input type="text" class="form-control">
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
-  </div>
+  </div> %>
 
 <div class="carousel">
   <img alt="Area4u"
@@ -113,9 +114,6 @@
       <%= image_tag "wellness.png", alt: "Wellness", width: 200 %>
       <%= link_to "Luxury", "#" %>
     </div>
-  </div>
-  <div>
-    <h4>JOIN OUR NEWSLETTER </h4>
   </div>
 </div>
 </div>
