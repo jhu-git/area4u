@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {background-color: black;}
+
+body {
+  color: white;
+
+  a {
+    color: blue;
+  }
+}
