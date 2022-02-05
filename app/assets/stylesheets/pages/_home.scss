@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+
+
+// Carousel
+.list-inline{
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+// Cards
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  border-radius: 25px;
+}
