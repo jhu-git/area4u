@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   resources :bookings
   resources :properties
   resources :users, only: [:show]
+  get '/properties', to: 'properties#index'
+  get '/categories', to: 'pages#categories'
+  get '/locations', to: 'pages#locations'
+  get '/themes', to: 'pages#themes'
+  get '/about', to: 'pages#about'
 end
