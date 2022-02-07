@@ -14,9 +14,25 @@
 
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
+  width: auto;
+  margin: 0 auto;
 }
+// CARD IS DIFFERENT FROM IMAGE
+
+// Button
+.btn {
+  width: 250px;
+  display: inline-block;
+}
+// Testimonial
+.flex-card {
+  width: 250px;
+}
+
+
 
 body {background-color: black;}
 
@@ -26,4 +42,9 @@ body {
   a {
     color: blue;
   }
+}
+
+.content {
+  margin-left: 50px;
+  margin-right: 50px;
 }
