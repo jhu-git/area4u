@@ -19,14 +19,14 @@
   justify-content: space-between;
   width: auto;
   margin: 0 auto;
+  .btn {
+    width: 250px;
+    display: inline-block;
+  }
 }
 // CARD IS DIFFERENT FROM IMAGE
 
 // Button
-.btn {
-  width: 250px;
-  display: inline-block;
-}
 // Testimonial
 .flex-card {
   width: 250px;

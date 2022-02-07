@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def themes
   end
+
+  def about
+  end
 end
