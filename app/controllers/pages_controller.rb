@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @property = Property.all
   end
 
   def categories

@@ -1,4 +1,4 @@
-<form>
+<%# <form>
   <div class="form-row">
     <div class="col-7">
       <input type="text" class="form-control" placeholder="Location">
@@ -12,6 +12,36 @@
     <div class="col">
       <input type="integer" class="form-control" placeholder="Guests">
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+     <a href=""><button class="btn btn-primary" type="submit">Submit</button>
   </div>
-</form>
+</form> %>
+
+  <div class="form-row">
+  <div class="col-7">
+<%= form_tag properties_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search by Property, Location, Category.."
+  %></div>
+  <div class="col">
+  <%= datetime_field_tag :check_in,
+    params[:check_in],
+    class: "form-control",
+    placeholder: "Check-in"
+  %></div>
+  <div class="col">
+  <%= datetime_field_tag :check_out,
+    params[:check_out],
+    class: "form-control",
+    placeholder: "Check-out"
+  %></div>
+  <div class="col">
+  <%= number_field_tag :guest,
+    params[:guest],
+    class: "form-control",
+    placeholder: "# of Guests"
+  %></div>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+</div>
