@@ -21,3 +21,28 @@
 .card {
   border-radius: 25px;
 }
+
+// Login
+.login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-login {
+  width: 400px;
+  margin-bottom: 50px;
+}
+// Signup
+.signup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-signup {
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.area4u-card-img{
+  border-radius: 25px;
+}
