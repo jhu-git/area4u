@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   #skip_before_action :authenticate_user!, only: [:home, :signup]
 
   def home
+    @property = Property.all
   end
 
   def categories
