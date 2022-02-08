@@ -3,6 +3,8 @@
     <h1>Area 4U</h1>
   </div>
 
+  <%= render "shared/searchbox" %>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active ">
@@ -25,7 +27,6 @@
   </button>
 </div>
 
-  <%= render "shared/searchbox" %>
 
 <div class="carousel">
 
@@ -84,13 +85,13 @@
       <%= image_tag "cooking.png" , alt: "Cooking" %>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Cooking</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Cooking</button>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Wellness</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Wellness</button>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Luxary</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Luxary</button>
     </div>
 
   </div>
@@ -108,13 +109,13 @@
       <%= image_tag "cooking.png" , alt: "Cooking" %>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Privetjet</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Privetjet</button>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Beach</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Beach</button>
     </div>
     <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Modern</button>
+      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Modern</button>
     </div>
 
   </div>
