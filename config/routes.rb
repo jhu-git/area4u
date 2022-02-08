@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/locations', to: 'pages#locations'
   get '/themes', to: 'pages#themes'
   get '/about', to: 'pages#about'
+  get '/login', to: 'pages#login'
+  get '/signup', to: 'pages#signup'
 end
