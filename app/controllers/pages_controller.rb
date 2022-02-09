@@ -22,12 +22,4 @@ class PagesController < ApplicationController
 
   def profile
   end
-
-  def newsletter
-  end
-
-  def newsletter_submit
-    raise
-    puts params
-  end
 end

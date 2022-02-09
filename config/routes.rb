@@ -13,8 +13,9 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'pages#dashboard'
   get '/profile', to: 'pages#profile'
-  get '/newsletter', to: 'pages#newsletter'
-  post '/newsletter', to: 'pages#newsletter_submit'
+  get '/newsletter', to: 'newsletters#new'
+  post '/newsletter', to: 'newsletters#create'
+  get '/newsletter/subscribed', to: 'newsletters#subscribed'
 
   get '/login', to: 'pages#login'
   get '/signup', to: 'pages#signup'
