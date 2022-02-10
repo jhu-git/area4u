@@ -1,7 +1,7 @@
 <div class="container">
 <div class="content">
   <div class="banner">
-    <h1>Area 4U</h1>
+    <h1>Area<strong>4U</strong></h1>
   </div>
 
   <%= render "shared/searchbox" %>
@@ -29,47 +29,31 @@
 </div>
 
 
-<div class="carousel">
-
-  <div class="carousel-footer">
-    <div>
-      <h2>Choose the perfect area rental</h2>
-        <div>
-
-          <ul class="list-inline">
-
-          <ul>
-
-            <li>Price per hour</li>
-            <li>Ratings</li>
-            <li>Properties</li>
-          </ul>
-        </div>
+<div class="simple-filter">
+  <h2>Choose your perfect rental</h2>
+  <div id='simple-home-filter'>
+    <h4>Price per hour</h4>
+    <h4>Ratings</h4>
+    <h4>Type</h4>
+  </div>
+  <div id="simple-home-filter-opts">
+    <div class="btn-group">
+      <%= link_to "€10 - €100", "#", class: "btn btn-dark" %>
+      <%= link_to "€100-€199", "#", class: "btn btn-dark" %>
+      <%= link_to ">€200", "#", class: "btn btn-dark" %>
+    </div>
+    <div class="btn-group">
+      <%= link_to "3 stars", "#", class: "btn btn-dark" %>
+      <%= link_to "4 stars", "#", class: "btn btn-dark" %>
+      <%= link_to "5 stars", "#", class: "btn btn-dark" %>
+    </div>
+    <div class="btn-group">
+      <%= link_to "Properties", "#", class: "btn btn-dark" %>
+      <%= link_to "Category", "#", class: "btn btn-dark" %>
+      <%= link_to "Themes", "#", class: "btn btn-dark" %>
     </div>
   </div>
-    <div>
-      <ul>
-        <%= link_to "Up to €100", "#" %>
-        <%= link_to "€100-€199", "#" %>
-        <%= link_to "€200-Up", "#" %>
-      </ul>
-      </div>
-
-    </div>
-      <div>
-        <ul>
-          <%= link_to "4.5+", "#" %>
-          <%= link_to "4+", "#" %>
-          <%= link_to "3.5+", "#" %>
-        </ul>
-      </div>
-        <div>
-          <ul>
-            <%= link_to "Themes", "#" %>
-            <%= link_to "Category", "#" %>
-            <%= link_to "Properties", "#" %>
-          </ul>
-      </div>
+</div>
 
 
 <div class="tab">
