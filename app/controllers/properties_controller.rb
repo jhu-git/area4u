@@ -1,6 +1,14 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query
+                   OR location ILIKE :query
+                   OR category ILIKE :query
+                   OR theme ILIKE :query"
+      @properties = Property.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @properties = Property.all
+    end
   end
 
   def create
