@@ -1,0 +1,36 @@
+.profile-padding-y {
+  padding-top: 56px;
+}
+
+.profile-content-center {
+  width: 1000px;
+  margin: 0 auto
+}
+
+
+.profileinfo-flex {
+  display: flex;
+  div {
+
+    margin-right: 8px;
+  }
+}
+
+.textbox-underline {
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  border-bottom: 0.1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  a {
+    color: rgb(126, 126, 126);
+    background-color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: rgb(196, 196, 196);
+  }
+}
