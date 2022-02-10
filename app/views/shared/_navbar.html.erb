@@ -13,26 +13,26 @@
           <li><a href="/locations" class="nav-link px-2 navbar-link">Locations</a></li>
           <li><a href="/themes" class="nav-link px-2 navbar-link">Themes</a></li>
           <li><a href="/about" class="nav-link px-2 navbar-link">About</a></li>
-          <li><a href="/users/sign_in" class="nav-link px-2 navbar-link">Log In</a></li>
-          <li><a href="/users/sign_up" class="nav-link px-2 navbar-link">Sign Up</a></li>
-          <% if user_signed_in? %>
-          <p>user is signed in</p>
-            <p><%= current_user.email %></p>
-          <% end %>
         </ul>
 
         <div class="dropdown show">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="/assets/avatar.jpeg" width="32" height="32" class="avatar-square">
+            <i class="fa-solid fa-square-user"></i>
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% if user_signed_in? %>
             <a class="dropdown-item" href="/">Home</a>
             <a class="dropdown-item" href="/dashboard">My Dashboard</a>
             <a class="dropdown-item" href="/profile">My Profile</a>
             <a class="dropdown-item" href="logout"><%= button_to "Log out", destroy_user_session_path, method: :delete  %></a>
+          <% else %>
+            <a href="/users/sign_in" class="nav-link px-2 navbar-link">Log In</a>
+            <a href="/users/sign_up" class="nav-link px-2 navbar-link">Sign Up</a>
+          <% end %>
           </div>
         </div>
+
 
       </div>
     </div>
