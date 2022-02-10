@@ -9,29 +9,30 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
           <li><a href="/" class="nav-link px-2 navbar-link">Home</a></li>
-          <li><a href="/properties" class="nav-link px-2 navbar-link">Properties</a></li>
           <li><a href="/categories" class="nav-link px-2 navbar-link">Categories</a></li>
           <li><a href="/locations" class="nav-link px-2 navbar-link">Locations</a></li>
           <li><a href="/themes" class="nav-link px-2 navbar-link">Themes</a></li>
           <li><a href="/about" class="nav-link px-2 navbar-link">About</a></li>
-          <li><a href="/users/sign_in" class="nav-link px-2 navbar-link">SignUP</a></li>
-          <li><a href="/login" class="nav-link px-2 navbar-link">LongIN</a></li>
         </ul>
 
-        <% if user_signed_in? %>
-          <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="/assets/avatar.jpeg" width="32" height="32" class="avatar-square">
-            </a>
+        <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-square-user"></i>
+          </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/">Home</a>
-              <a class="dropdown-item" href="/dashboard">My Dashboard</a>
-              <a class="dropdown-item" href="/profile">My Profile</a>
-              <a class="dropdown-item" href="logout"><%= button_to "Log out", destroy_user_session_path, method: :delete  %></a>
-            </div>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% if user_signed_in? %>
+            <a class="dropdown-item" href="/">Home</a>
+            <a class="dropdown-item" href="/dashboard">My Dashboard</a>
+            <a class="dropdown-item" href="/profile">My Profile</a>
+            <a class="dropdown-item" href="logout"><%= button_to "Log out", destroy_user_session_path, method: :delete  %></a>
+          <% else %>
+            <a href="/users/sign_in" class="nav-link px-2 navbar-link">Log In</a>
+            <a href="/users/sign_up" class="nav-link px-2 navbar-link">Sign Up</a>
+          <% end %>
+          </div>
         </div>
-        <% end %>
+
 
       </div>
     </div>

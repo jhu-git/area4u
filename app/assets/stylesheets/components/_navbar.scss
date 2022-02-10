@@ -18,3 +18,13 @@
 .dropdown .show {
   height: 30px;
 }
+
+.dropdown-menu {
+  a {
+    background-color: white;
+    color: black
+  }
+  a:hover {
+    background-color: rgb(141, 141, 141);
+  }
+}

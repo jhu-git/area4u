@@ -16,32 +16,32 @@
   </div>
 </form> %>
 
-  <div class="form-row">
-  <div class="col-7">
+<div class="form-row">
+  <div class="col-5">
 <%= form_tag properties_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Search by Property, Location, Category.."
   %></div>
-  <div class="col">
+  <div class="col-2">
   <%= datetime_field_tag :check_in,
     params[:check_in],
     class: "form-control",
     placeholder: "Check-in"
   %></div>
-  <div class="col">
+  <div class="col-2">
   <%= datetime_field_tag :check_out,
     params[:check_out],
     class: "form-control",
     placeholder: "Check-out"
   %></div>
-  <div class="col">
+  <div class="col-2">
   <%= number_field_tag :guest,
     params[:guest],
     class: "form-control",
-    placeholder: "# of Guests"
+    placeholder: "Guests"
   %></div>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "btn btn-secondary" %>
 <% end %>
 </div>

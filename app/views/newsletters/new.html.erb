@@ -1,0 +1,4 @@
+<%= simple_form_for @newsletter, url: newsletter_path do |f| %>
+  <%= f.input :email %>
+  <%= f.submit "Submit", class: "btn btn-secondary" %>
+<% end %>
