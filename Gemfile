@@ -29,11 +29,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'pg_search'
 gem 'faker'
+gem 'geocoder'
 
 
 group :development, :test do

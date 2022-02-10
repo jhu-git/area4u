@@ -1,18 +1,38 @@
-<h1>Welcome <b>back</b></h1>
-<div class="textbox-underline">
-  <h3>Your profile</h3>
-</div>
-<div class="profileinfo-flex">
-  <div>
-    <h5>Firs and last name</h5>
-    <h5>Date of birth</h5>
-  </div>
-  <div>
-    <h5>Example name</h5>
-    <h5>Example date of birth</h5>
-  </div>
-</div>
 
-<div class="textbox-underline">
-  <h3>Manage your <b>bookings</b></h3>
+<div class='container'>
+  <center><h1>Welcome <strong>back</strong></h1></center>
+  <div class='profile-section'>
+    <h2>Your profile <strong>details</strong></h2>
+    <hr>
+    <div id='profile-details'>
+      <h4>First <strong>name</strong></h4>
+      <h4>George</strong></h4>
+      <h4>Last <strong>name</strong></h4>
+      <h4>Anders</h4>
+      <h4>Date of <strong>birth</strong></h4>
+      <h4>14 of January 1987</h4>
+    </div>
+  </div>
+
+  <div id="bookings-section">
+    <h2>Manage your <strong>bookings</strong></h2>
+    <% if current_user.owner_profile? == true  %>
+
+    <% else %>
+      <div id="booking">
+        <div id="booking-details">
+          <h2>Hollywood, Los Angeles, US</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h3>In 4 days</h3>
+        </div>
+        <img src="assets/jet-carousel.png" alt="Transport">
+        <div id="booking-options">
+          <div class="btn-group" id="manage-booking-btns" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-dark">Manage reservation</button>
+            <button type="button" class="btn btn-danger">Cancel reservation</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
