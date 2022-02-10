@@ -13,5 +13,4 @@ const initMapbox = () => {
     });
   }
 };
-
 export { initMapbox };
