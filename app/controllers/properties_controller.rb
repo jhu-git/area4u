@@ -1,27 +1,14 @@
+# app/controllers/flats_controller.rb
 class PropertiesController < ApplicationController
   def index
     @properties = Property.all
-  end
 
-  def create
-    @property = Property.new
-  end
-
-  def new
-    @property = Property.new
-  end
-
-  def destroy
-    @property = Property.find(params[:id])
-    @property.destroy
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def show
+    # the `geocoded` scope filters only properties with coordinates (latitude & longitude)
+    @markers = @properties.geocoded.map do |property|
+      {
+        lat: property.latitude,
+        lng: property.longitude
+      }
+    end
   end
 end
