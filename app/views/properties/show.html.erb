@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="properties">
+          <div class="property-card">
+            <div>
+              <h3><%= @property.name %></h3>
+              <p>Address: <%= @property.location %></p>
+              <p><%= @property.description %></p>
+              <p>Category: <%= @property.category %></p>
+              <p>Theme: <%= @property.theme %></p>
+            </div>
+            <div class="form-row">
+              <%= simple_form_for (@booking) do |f| %>
+              <%= hidden_field_tag :property_id, @property.id %>
+              <%= hidden_field_tag :user_id, current_user.id %>
+                <%= datetime_field_tag :start,
+                    params[:start],
+                    class: "form-control",
+                    placeholder: "Check-in" %>
+                <%= datetime_field_tag :end,
+                    params[:end],
+                    class: "form-control",
+                    placeholder: "Check-out" %>
+                <%= number_field_tag :guests,
+                    params[:guests],
+                    class: "form-control",
+                    placeholder: "Guests" %>
+                <%= f.submit "Submit", class: "btn btn-secondary" %>
+              <% end %>
+            </div>
+          <% flash.each do |name, msg| %>
+            <div class="alert alert-<%= name %>">
+              <%= msg %>
+            </div>
+          <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
