@@ -5,6 +5,7 @@
   margin-bottom: 4%;
 }
 
+/* BOOKINGS STYLE */
 #booking {
   border: 1px solid rgb(141, 141, 141);
   padding: 2%;
@@ -35,6 +36,42 @@ h3 {
 }
 
 #manage-booking-btns {
+  width: 100%;
+  .btn {
+    border-radius: 5px;
+  }
+  .btn:nth-child(even) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+
+/* PROPERTY STYLE */
+
+#properties {
+
+}
+#property {
+  border: 1px solid rgb(141, 141, 141);
+  padding: 2%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 20%;
+  img {
+    width:60%;
+    height: 190px;
+    background-size: contain;
+    justify-self: end;
+    border-radius: 4px;
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+}
+
+#property-options {
   width: 100%;
   .btn {
     border-radius: 5px;
