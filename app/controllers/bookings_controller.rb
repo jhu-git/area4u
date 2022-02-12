@@ -18,6 +18,8 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
   end
 
   def edit
@@ -27,6 +29,8 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @property = Property.find(params[:id])
+    @bookings = Booking.where(property_id: @property)
   end
 
   private

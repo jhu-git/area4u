@@ -35,7 +35,13 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    @property = Property.new
+    @property = Property.new(property_params)
+    @property.user_id = current_user.id
+    if @property.save
+      redirect_to dashboard_path
+    else
+      raise
+    end
   end
 
   def new
@@ -45,12 +51,21 @@ class PropertiesController < ApplicationController
   def destroy
     @property = Property.find(params[:id])
     @property.destroy
+    redirect_to dashboard_path
   end
 
   def edit
+    @property = Property.find(params[:id])
   end
 
   def update
+    @property = Property.find(params[:id])
+    @property.update(property_params)
+    if @property.save
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
 
@@ -81,4 +96,7 @@ class PropertiesController < ApplicationController
     return !booleans.include?(false)
   end
 
+  def property_params
+    params.require(:property).permit(:name, :description, :location, :category, :theme, :price, :user_id)
+  end
 end
