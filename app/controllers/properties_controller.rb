@@ -15,6 +15,7 @@ class PropertiesController < ApplicationController
       @properties = @allproperties.reject{|property| !available?(property)}
     else
       @properties = Property.all
+    end
 
     if @properties.class != Array
       @markers = @properties.geocoded.map do |property|
@@ -30,14 +31,6 @@ class PropertiesController < ApplicationController
           lng: property.longitude
         }
       end
-
-
-    @markers = @properties.geocoded.map do |property|
-      {
-        lat: property.latitude,
-        lng: property.longitude
-      }
-
     end
   end
 
@@ -60,7 +53,7 @@ class PropertiesController < ApplicationController
   def update
   end
 
- property_page
+
   def show
     if user_signed_in?
       @property = Property.find(params[:id])
@@ -89,18 +82,3 @@ class PropertiesController < ApplicationController
   end
 
 end
-
-  def index
-      @properties = Property.all
-
-      # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
-      @markers = @properties.geocoded.map do |property|
-        {
-          lat: property.latitude,
-          lng: property.longitude
-        }
-      end
-    end
-
-  end
-
