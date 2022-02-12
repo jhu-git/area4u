@@ -7,9 +7,11 @@
         <% @bookings.each do |booking| %>
         <div id="booking">
           <div id="booking-details">
-            <h2><%= booking.user_id %></h2>
-            <p><%= booking.created_at %></p>
-            <h3><%= booking.start %> - <%= booking.end %></h3>
+            <% user = User.find(booking.user_id) %>
+            <h2><%= user.first_name %> <%= user.last_name %></h2>
+            <p>Booking made at:  <%= booking.created_at.strftime("%c") %></p>
+            <h3>Booking starts: <%= booking.start.strftime("%c") %></h3>
+            <h3>Booking end: <%= booking.end.strftime("%c") %></h3>
           </div>
           <img src="assets/jet-carousel.png" alt="Transport">
           <div id="booking-options">
