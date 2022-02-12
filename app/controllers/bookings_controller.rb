@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     if available?
       @booking.save
-      redirect_to dashboard_path
+      redirect_to confirmation_path
     else
       redirect_to property_path(params[:property_id]), info: "The property is booked for those dates/times."
     end
