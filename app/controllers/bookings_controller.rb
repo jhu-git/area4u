@@ -49,12 +49,21 @@ class BookingsController < ApplicationController
     bookings = Booking.where(property_id: params[:property_id])
     booleans = []
     bookings.each do |booking|
-      booleans << (booking[:start] <= params[:start] && booking[:end] <= params[:start])
-      booleans << (booking[:start] >= params[:start] && booking[:start] >= params[:end])
-      booleans << (booking[:start] <= params[:end] && booking[:end] <= params[:start])
-      booleans << (booking[:start] >= params[:end] || booking[:end] <= params[:start])
-      booleans << (booking[:end] >= params[:start] && booking[:start] >= params[:end])
-      booleans << (booking[:end] <= params[:end] && booking[:end] >= params[:start])
+      if (booking[:start] <= params[:start])
+        booleans << (booking[:end] <= params[:start])
+      elsif (booking[:start] >= params[:start])
+        booleans << (booking[:start] >= params[:end])
+      elsif booking[:start] <= params[:end]
+        booleans << (booking[:end] <= params[:start])
+      elsif booking[:start] >= params[:end]
+        booleans << true
+      elsif booking[:end] <= params[:start]
+        booleans << true
+      elsif booking[:end] >= params[:start]
+        booleans << (booking[:start] >= params[:end])
+      elsif booking[:end] <= params[:end]
+        booleans << (booking[:end] >= params[:start])
+      end
     end
     return !booleans.include?(false)
   end

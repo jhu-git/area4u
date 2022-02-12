@@ -85,12 +85,21 @@ class PropertiesController < ApplicationController
     booleans = []
     bookings.each do |booking|
       if booking[:start] != nil && booking[:end] != nil
-        booleans << (booking[:start] <= params["check_in"] && booking[:end] <= params["check_in"])
-        booleans << (booking[:start] >= params["check_in"] && booking[:start] >= params["check_out"])
-        booleans << (booking[:start] <= params["check_out"] && booking[:end] <= params["check_in"])
-        booleans << (booking[:start] >= params["check_out"] || booking[:end] <= params["check_in"])
-        booleans << (booking[:end] >= params["check_in"] && booking[:start] >= params["check_out"])
-        booleans << (booking[:end] <= params["check_out"] && booking[:end] >= params["check_in"])
+        if booking[:start] <= params["check_in"]
+          booleans << (booking[:end] <= params["check_in"])
+        elsif booking[:start] >= params["check_in"]
+          booleans << (booking[:start] >= params["check_out"])
+        elsif booking[:start] <= params["check_out"]
+          booleans << (booking[:end] <= params["check_in"])
+        elsif booking[:start] >= params["check_out"]
+          booleans << true
+        elsif booking[:end] <= params["check_in"]
+          booleans << true
+        elsif booking[:end] >= params["check_in"]
+          booleans << (booking[:start] >= params["check_out"])
+        elsif booking[:end] <= params["check_out"]
+          booleans << (booking[:end] >= params["check_in"])
+        end
       end
     end
     return !booleans.include?(false)
