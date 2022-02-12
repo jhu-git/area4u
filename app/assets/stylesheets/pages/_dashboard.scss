@@ -75,9 +75,35 @@ h3 {
   width: 100%;
   .btn {
     border-radius: 5px;
+    a {
+      text-decoration: none;
+      color: white
+    }
   }
   .btn:nth-child(even) {
     margin-left: 2%;
     margin-right: 2%;
+  }
+}
+
+#bookings-section {
+  .flex {
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    border-bottom: 0.1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    a {
+      color: rgb(126, 126, 126);
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    a:hover {
+      background-color: rgb(196, 196, 196);
+    }
   }
 }

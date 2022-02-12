@@ -6,63 +6,38 @@
     <hr>
     <div id='profile-details'>
       <h4>First <strong>name</strong></h4>
-      <h4>George</strong></h4>
+      <h4><%= current_user.first_name %></strong></h4>
       <h4>Last <strong>name</strong></h4>
-      <h4>Anders</h4>
+      <h4><%= current_user.last_name %></h4>
     </div>
   </div>
 
   <div id="bookings-section">
     <% if current_user.owner_profile? == true  %>
-      <h2>Manage your <strong>properties</strong></h2>
+      <div class="flex">
+        <h2>Manage your <strong>properties</strong></h2>
+        <%= link_to "Create a new property", new_property_path %>
+      </div>
       <hr style="margin-bottom: 3%">
       <div id="properties">
-        <div id="property">
-            <div id="property-details">
-              <h2>Hollywood, Los Angeles, US</h2>
-              <p></p>
-              <h3>Not booked yet</h3>
-            </div>
-            <img src="assets/luxury-property.jpg" alt="Transport">
-            <div id="property-options">
-              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-dark">Manage property</button>
-                <button type="button" class="btn btn-dark">Show client details</button>
-                <button type="button" class="btn btn-danger">Set as not available</button>
-              </div>
-              </div>
-        </div>
+        <% @properties.each do |property| %>
           <div id="property">
             <div id="property-details">
-              <h2>Florence, Tuscany, Italy</h2>
+              <h2><%= property.location %></h2>
               <p></p>
-              <h3>Booked for <strong>8 hours</strong></h3>
+              <h3><%= property.name %></h3>
             </div>
             <img src="assets/florence-house.jpg" alt="Transport">
             <div id="property-options">
               <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-dark">Manage property</button>
-                <button type="button" class="btn btn-dark">Show client details</button>
-                <button type="button" class="btn btn-danger">Set as not available</button>
+                <button type="button" class="btn btn-dark"><%= link_to "Manage property", edit_property_path(property) %></button>
+                <button type="button" class="btn btn-dark"><%= link_to "Remove property", property_path(property), method: :delete, data: { confirm: "Are you sure?" }   %></button>
+                <button type="button" class="btn btn-dark"><%= link_to "Manage bookings", property_bookings_path(property) %></button>
               </div>
               </div>
         </div>
-        <div id="property">
-            <div id="property-details">
-              <h2>London, England</h2>
-              <p></p>
-              <h3>Not booked <strong>yet</strong></h3>
-            </div>
-            <img src="assets/london-house.jpg" alt="Transport">
-            <div id="property-options">
-              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-dark">Manage property</button>
-                <button type="button" class="btn btn-dark">Show client details</button>
-                <button type="button" class="btn btn-success">Set as available</button>
-              </div>
-              </div>
+          <% end %>
 
-        </div>
     <% else %>
     <h2>Manage your <strong>bookings</strong></h2>
       <div id="booking">

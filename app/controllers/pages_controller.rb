@@ -18,6 +18,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @properties = Property.where(user_id: current_user)
   end
 
   def profile
