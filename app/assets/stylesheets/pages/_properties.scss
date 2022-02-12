@@ -1,0 +1,19 @@
+.property-card {
+  margin-bottom: 32px;
+  border: 0.1px solid white;
+  padding: 24px 24px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  a {
+    padding: 6px 24px;
+    background-color: rgb(161, 161, 161);
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: rgb(104, 104, 104);
+  }
+}
