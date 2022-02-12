@@ -23,4 +23,10 @@ class PagesController < ApplicationController
 
   def profile
   end
+
+  def confirmation
+    @booking = Booking.last
+    @property = Property.find(@booking[:property_id])
+  end
+
 end
