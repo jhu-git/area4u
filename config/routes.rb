@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   get '/login', to: 'pages#login'
   get '/signup', to: 'pages#signup'
+
+  get '/confirmation', to: 'pages#confirmation'
 end

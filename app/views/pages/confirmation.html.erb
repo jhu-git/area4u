@@ -1,0 +1,35 @@
+
+<div class='container'>
+  <h2><strong>Congratulations!</strong> Your booking is confirmed!</h2>
+  <br>
+  <h3>See below for your booking details</h3>
+</div>
+  <br>
+<div class="container">
+  <div class="row justify-content-left">
+    <div class="col-sm-8">
+          <div class="confirmation-card">
+            <div>
+              <p>Property Name: <%= @property.name %></p>
+              <p>Address: <%= @property.location %></p>
+              <p><%= @property.description %></p>
+              <p>Category: <%= @property.category %></p>
+              <p>Theme: <%= @property.theme %></p>
+              <p>Check-in: <%= @booking.start %></p>
+              <p>Check-in: <%= @booking.end %></p>
+              <p>Number of guests: <%= @booking.guests %></p>
+            </div>
+          </div>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+  <div id="confirmation-options">
+
+    <%= link_to "Explore other places", root_path, {class: "btn btn-primary"}%>
+    <br>
+    <br>
+    <%= link_to "Change/edit your booking", dashboard_path, {class: "btn btn-secondary"}%>
+  </div>
+ </div>
