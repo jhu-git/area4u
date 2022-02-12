@@ -1,4 +1,3 @@
-// app/javascript/plugins/init_mapbox.js
 import mapboxgl from 'mapbox-gl';
 
 const buildMap = (mapElement) => {

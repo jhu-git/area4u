@@ -6,6 +6,13 @@ class PagesController < ApplicationController
   end
 
   def categories
+    @properties = Property.all
+      @markers = @properties.geocoded.map do |property|
+        {
+          lat: property.latitude,
+          lng: property.longitude
+        }
+      end
   end
 
   def locations
