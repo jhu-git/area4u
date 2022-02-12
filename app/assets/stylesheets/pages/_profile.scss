@@ -8,10 +8,10 @@
 }
 
 
-.profileinfo-flex {
-  display: flex;
+.profile-info {
+  display: grid;
+  row-gap: 10%;
   div {
-
     margin-right: 8px;
   }
 }
@@ -20,15 +20,17 @@
   padding-bottom: 8px;
   margin-bottom: 24px;
   border-bottom: 0.1px solid white;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 15%;
   align-items: flex-end;
   a {
-    color: rgb(126, 126, 126);
-    background-color: white;
-    padding: 2px 4px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 2px;
     text-decoration: none;
+    font-size: 1.3em;
   }
   a:hover {
     background-color: rgb(196, 196, 196);
@@ -37,4 +39,23 @@
 
 .page-padding-bottom {
   padding-bottom: 64px;
+}
+
+
+.form-inputs {
+  width: 50%;
+  margin: auto;
+}
+
+.form-actions {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 30%;
+}
+.edit-h1 {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5%;
 }
