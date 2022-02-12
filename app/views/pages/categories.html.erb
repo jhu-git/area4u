@@ -1,1 +1,94 @@
-<h1>this is categories page</h1>
+
+
+
+
+<div class="container">
+
+<h2>Categories</h2>
+<div class="simple-filter">
+  <h2>Choose your perfect rental</h2>
+  <div id='simple-home-filter'>
+    <h4>Price per hour</h4>
+    <h4>Ratings</h4>
+    <h4>Type</h4>
+  </div>
+  <div id="simple-home-filter-opts">
+    <div class="btn-group">
+      <%= link_to "€10 - €100", "#", class: "btn btn-dark" %>
+      <%= link_to "€100-€199", "#", class: "btn btn-dark" %>
+      <%= link_to ">€200", "#", class: "btn btn-dark" %>
+    </div>
+    <div class="btn-group">
+      <%= link_to "3 stars", "#", class: "btn btn-dark" %>
+      <%= link_to "4 stars", "#", class: "btn btn-dark" %>
+      <%= link_to "5 stars", "#", class: "btn btn-dark" %>
+    </div>
+    <div class="btn-group">
+      <%= link_to "Properties", "#", class: "btn btn-dark" %>
+      <%= link_to "Category", "#", class: "btn btn-dark" %>
+      <%= link_to "Themes", "#", class: "btn btn-dark" %>
+    </div>
+  </div>
+</div>
+
+
+     <div id="property">
+            <div id="property-details">
+              <h2>Florence, Tuscany, Italy</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+            </div>
+            <img src="assets/kitchen.png" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+                </div>
+              </div>
+        </div>
+
+  <div id="property">
+            <div id="property-details">
+              <h2>Florence, Tuscany, Italy</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+            </div>
+            <img src="assets/beach.png" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+              </div>
+              </div>
+        </div>
+
+        <div id="property">
+            <div id="property-details">
+              <h2>Florence, Tuscany, Italy</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+            </div>
+            <img src="assets/yoga.png" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+              </div>
+              </div>
+        </div>
+
+<div id="property">
+            <div id="property-details">
+              <h2>Florence, Tuscany, Italy</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+            </div>
+            <img src="assets/nature.png" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+              </div>
+              </div>
+        </div>
+
+  </div>
+  <div id="map-sticky">
+    <div id="map"
+      style="width: 50%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
