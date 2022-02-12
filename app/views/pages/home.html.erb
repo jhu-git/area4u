@@ -55,83 +55,69 @@
   </div>
 </div>
 
+<div class='options'>
+  <div class='themes-section'>
+    <h3>Themes</h3>
+    <hr>
+    <div class='themes'>
+      <div class='cooking'>
+        <%= image_tag "kitchenhome.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/themes'">Cooking</button>
+      </div>
+      <div class='wellness'>
+        <%= image_tag "yoga.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/themes'">Wellness</button>
+      </div>
+      <div class='luxury'>
+        <%= image_tag "luxary2.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/themes'">Luxury</button>
+      </div>
+    </div>
+  </div>
+  <div class='category-section'>
+    <h3>Category</h3>
+    <hr>
+    <div class='category'>
+      <div class='transport'>
+        <%= image_tag "transport.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/category'">Transport</button>
+      </div>
+      <div class='beach'>
+        <%= image_tag "beach.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/category'">Beach</button>
+      </div>
+      <div class='nature'>
+        <%= image_tag "nature.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <button type="button" id="btn" class="btn btn-dark btn-sm" onclick="location.href='/category'">Nature</button>
+      </div>
+    </div>
+  </div>
 
-<div class="tab">
-    <h4>THEMES</h4>
+  <div class='testimonials-section'>
+    <h3>Testimonials</h3>
+    <div class='testimonials'>
+      <div class='t1'>
+        <%= image_tag "testimonial1.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <h2 style='margin-top: 4%'>Laura<i class="fas fa-check"></i></h2>
+        <hr>
+        <p>We found this hotel by accident and are so glad we did! We will definitely be staying here next time we’re in town. </p>
+      </div>
+      <div class='t2'>
+        <%= image_tag "testimonial2.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <h2 style='margin-top: 4%'>Laura<i class="fas fa-check"></i></h2>
+        <hr>
+        <p>We found this hotel by accident and are so glad we did! We will definitely be staying here next time we’re in town. </p>
+      </div>
+      <div class='t3'>
+        <%= image_tag "testimonial3.png" , class:"area4u-card-img", alt: "Cooking" %>
+        <h2 style='margin-top: 4%'>Laura<i class="fas fa-check"></i></h2>
+        <hr>
+        <p>We found this hotel by accident and are so glad we did! We will definitely be staying here next time we’re in town. </p>
+      </div>
+    </div>
   </div>
-  <div class="cards">
-    <div class="card">
-    <%= image_tag "kitchenhome.png" , class:"area4u-card-img", alt: "Cooking" %>
-    </div>
-    <div class="card">
-      <%= image_tag "yoga.png" , class:"area4u-card-img", alt: "Cooking" %>
-    </div>
-    <div class="card">
-      <%= image_tag "luxary2.png" , class:"area4u-card-img", alt: "Cooking" %>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Cooking</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Wellness</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/themes'">Luxary</button>
-    </div>
 
-  </div>
-  <div class="tab">
-    <h4>CATEGORY</h4>
-  </div>
-  <div class="cards">
-    <div class="card">
-    <%= image_tag "transport.png" , class:"area4u-card-img", alt: "Privetjet" %>
-    </div>
-    <div class="card">
-      <%= image_tag "beach.png" , class:"area4u-card-img", alt: "Beach" %>
-    </div>
-    <div class="card">
-      <%= image_tag "nature.png" , class:"area4u-card-img", alt: "Nature" %>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Transport</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Beach</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm" onclick="location.href='/categories'">Nature</button>
-    </div>
-
-  </div>
-  <div class="tab">
-    <h4>TESTIMONIALS</h4>
-  </div>
-  <div class="cards">
-    <div class="flex-card">
-    <%= image_tag "testimonial1.png", class:"testimonial-card-img", alt: "Cooking", width: 250  %>
-    </div>
-    <div class="flex-card">
-    <%= image_tag "testimonial2.png", class:"testimonial-card-img", alt: "Cooking", width: 250 %>
-    </div>
-    <div class="flex-card">
-    <%= image_tag "testimonial3.png", class:"testimonial-card-img", alt: "Cooking", width: 250 %>
-    </div>
-    <div class button-white>
-    <button type="button" class="btn btn-light btn-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-    Debitis tenetur facere in molestias consequuntur unde. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-    Debitis tenetur facere in molestias consequuntur unde</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Debitis tenetur facere in molestias consequuntur unde. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Debitis tenetur facere in molestias consequuntur unde</button>
-    </div>
-    <div class button-white>
-      <button type="button" class="btn btn-light btn-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Debitis tenetur facere in molestias consequuntur unde. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Debitis tenetur facere in molestias consequuntur unde</button>
-    </div>
   </div>
 </div>
+
 </div>
