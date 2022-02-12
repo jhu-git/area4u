@@ -11,7 +11,7 @@ class PropertiesController < ApplicationController
     else
       @properties = Property.all
     end
-    
+
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,
@@ -39,4 +39,16 @@ class PropertiesController < ApplicationController
   def update
   end
 
-end
+  def index
+      @properties = Property.all
+
+      # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+      @markers = @properties.geocoded.map do |property|
+        {
+          lat: property.latitude,
+          lng: property.longitude
+        }
+      end
+    end
+
+  end
