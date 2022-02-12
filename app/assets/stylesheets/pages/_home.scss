@@ -1,5 +1,7 @@
 // Specific CSS for your home-page
-
+.banner h1 {
+  margin-bottom: 4%;
+}
 
 // Carousel
 .list-inline{
@@ -11,16 +13,6 @@
   display: inline-block;
 }
 
-// Cards
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
-.card {
-  border-radius: 15px;
-}
 
 // Login
 .login {
@@ -41,11 +33,6 @@
 .form-signup {
   width: 400px;
   margin-bottom: 50px;
-}
-
-
-.area4u-card-img{
-  border-radius: 25px;
 }
 
 .btn-group {
@@ -72,7 +59,7 @@ h4 {
 }
 .simple-filter {
   border: 1px solid rgb(71, 71, 71);
-  border-radius: 10px;
+  border-radius: 6px;
   margin-top: 6%;
   margin-bottom: 6%;
   h2 {
@@ -80,6 +67,50 @@ h4 {
   }
 }
 hr { display: block; height: 1px;
-    border: 0; border-top: 1px solid #ccc;
+    border: 0; border-top: 1px solid rgb(71, 71, 71);
     margin: 1em 0; padding: 0;
 }
+
+.themes, .category, .testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .cooking, .wellness, .luxury, .transport, .beach, .nature, .t1, .t2, .t3{
+    text-align: center;
+  }
+  .area4u-card-img {
+    margin: auto;
+    border-radius: 4px;
+  }
+  #btn {
+    width: 95%;
+    margin-top: 3%;
+    border-radius: 4px;
+  }
+  img {
+    width: 95%;
+    transition: transform .5s ease;
+  }
+  .area4u-card-img {
+    height: 300px;
+     overflow: hidden;
+  }
+  .area4u-card-img:hover {
+    transform: scale(1.03);
+  }
+  margin-bottom: 3%;
+}
+
+.testimonials {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 4px;
+  padding: 1%;
+  padding-top: 2%;
+}
+
+.options {
+  display: grid;
+
+}
+
+
+//transport beach nature
