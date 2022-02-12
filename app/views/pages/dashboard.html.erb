@@ -13,10 +13,58 @@
   </div>
 
   <div id="bookings-section">
-    <h2>Manage your <strong>bookings</strong></h2>
     <% if current_user.owner_profile? == true  %>
+      <h2>Manage your <strong>properties</strong></h2>
+      <hr style="margin-bottom: 3%">
+      <div id="properties">
+        <div id="property">
+            <div id="property-details">
+              <h2>Hollywood, Los Angeles, US</h2>
+              <p></p>
+              <h3>Not booked yet</h3>
+            </div>
+            <img src="assets/luxury-property.jpg" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-dark">Manage property</button>
+                <button type="button" class="btn btn-dark">Show client details</button>
+                <button type="button" class="btn btn-danger">Set as not available</button>
+              </div>
+              </div>
+        </div>
+          <div id="property">
+            <div id="property-details">
+              <h2>Florence, Tuscany, Italy</h2>
+              <p></p>
+              <h3>Booked for <strong>8 hours</strong></h3>
+            </div>
+            <img src="assets/florence-house.jpg" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-dark">Manage property</button>
+                <button type="button" class="btn btn-dark">Show client details</button>
+                <button type="button" class="btn btn-danger">Set as not available</button>
+              </div>
+              </div>
+        </div>
+        <div id="property">
+            <div id="property-details">
+              <h2>London, England</h2>
+              <p></p>
+              <h3>Not booked <strong>yet</strong></h3>
+            </div>
+            <img src="assets/london-house.jpg" alt="Transport">
+            <div id="property-options">
+              <div class="btn-group" id="manage-property-btns" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-dark">Manage property</button>
+                <button type="button" class="btn btn-dark">Show client details</button>
+                <button type="button" class="btn btn-success">Set as available</button>
+              </div>
+              </div>
 
+        </div>
     <% else %>
+    <h2>Manage your <strong>bookings</strong></h2>
       <div id="booking">
         <div id="booking-details">
           <h2>Hollywood, Los Angeles, US</h2>
